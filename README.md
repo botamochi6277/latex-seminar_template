@@ -1,0 +1,1 @@
+# latex-seminar_template
