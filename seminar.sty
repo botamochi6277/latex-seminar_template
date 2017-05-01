@@ -1,0 +1,37 @@
+\usepackage[margin=15mm, marginparwidth=40mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\graphicspath{{./figures/}}
+
+\renewcommand{\baselinestretch}{1.2}
+\usepackage{titlesec}%resize font-size of section
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
+
+\setlength{\parskip}{0cm} % 段落間
+\setlength{\itemsep}{0cm} % 項目間
+\leftmargini   2em
+\leftmarginv   .5em
+\leftmarginvi  .5em
+\parindent 1zw
+
+% 章題の調整 from robomech templete
+\def\section{\@startsection {section}{1}{\z@}{0.8zh plus 0.2zh minus
+    0.2zh}{0.4zh plus 0.1zh minus 0.1zh}{\normalsize\bf}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{0.8zh plus 0.15zh
+    minus 0.15zh}{0.1zh plus 0.1zh minus 0zh}{\small\bf}}
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}{0.2zh plus
+    0.1zh minus 0.1zh}{0.1zh plus 0.1zh minus 0.1zh}{\small\bf}}
+\def\paragraph{\@startsection{paragraph}{4}{\z@}{0zh}{0zh}{\small\bf}}
+\def\subparagraph{\@startsection{subparagraph}{4}{\parindent}{0zh}{0zh}{\small\bf}}
+
+% Add footer name
+\renewcommand{\headrulewidth}{0.0pt}
+\lfoot{
+\includegraphics[height=1.2ex]{\@logoimage}
+{\small \@seminar, \@date}
+} 
+\cfoot{}
+\rfoot{\thepage{}}
+\lhead{}
+\rhead{}

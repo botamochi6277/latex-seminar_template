@@ -1,0 +1,68 @@
+%% kubota.sty created at Sep. 8, 2015 
+%% Last Update: Apr. 15, 2016
+%% NOTE: This style file defines environment and commands matching for an individual writer, naoki kubota
+
+
+% Include package
+\usepackage[dvipdfmx]{graphicx} % figures
+\usepackage{fixltx2e}
+\usepackage{amsmath,amssymb} % equations 
+\usepackage{bm}				% equations
+\usepackage[caption=false]{subfig}
+%\usepackage{subcaption}
+\usepackage{url}
+\usepackage{cite}
+\usepackage{array} % tables
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage[version=3]{mhchem} % chemistry
+\usepackage{wrapfig}
+\usepackage{indentfirst}
+
+\usepackage{here}
+
+% Expand Capacity of figures per page
+\setcounter{topnumber}{5}%    ページ上部の図表は 5 個まで
+\def\topfraction{1.00}%       ページの上 1.00 まで図表で占めて可
+\setcounter{bottomnumber}{5}% ページ下部の図表は 5 個まで
+\def\bottomfraction{1.00}%    ページの下 1.00 まで図表で占めて可
+\setcounter{totalnumber}{10}% ページあたりの図表は 10 個まで
+\def\textfraction{0.04}%      ページうち本文が占める割合の下限
+%        これを 0 にすると本文が 1 行だけのページが出来る
+%        0.04 くらいにすると 1 行だけのページは防げる
+%        0.1 くらいが良いかも知れない
+\def\floatpagefraction{0.7}%  図表だけのページは少なくとも
+                           %  これだけを図表が占める
+
+%define new commands
+\def\labfig#1{\label{fig:#1}}
+\def\labtab#1{\label{tab:#1}}
+
+\def\reffig#1{Fig. \ref{fig:#1}}
+\def\reffigj#1{図\ref{fig:#1}}
+\def\refFig#1{Figure \ref{fig:#1}}
+
+\def\reftab#1{Table \ref{tab:#1}}
+\def\reftabj#1{表\ref{tab:#1}}
+%\def\refeq#1{(\ref{eq:#1})}
+%\def\refEq#1{Equation(\ref{eq:#1})}
+
+%\newcommand{\labfig}[1]{\label{fig:#1}}
+%\newcommand{\labtab}[1]{\label{tab:#1}}
+
+%\newcommand{\reffig}[1]{Fig. \ref{fig:#1}}}
+%\newcommand{\reftab}[1]{Table. \ref{tab:#1}}}
+
+\newcommand{\labeq}[1]{\label{eq:#1}}
+\newcommand{\refeq}[1]{(\ref{eq:#1})}
+\newcommand{\refEq}[1]{Equation(\ref{eq:#1})}
+
+\newcommand{\bhline}{\noalign{\hrule height 0.2ex}} % bold line
+\newcommand{\uline}{{\vrule width 8em height 0.4pt depth 0pt}}
+
+% Regular Subscripts
+\newcommand{\hip}{_\mathrm{hip}}
+\newcommand{\knee}{_\mathrm{knee}}
+\newcommand{\ankle}{_\mathrm{ankle}}
+
+
